@@ -74,25 +74,27 @@ Tested multiple regression models:
 
 ## Results
 
-| Model                        | Train MAE | Train RMSE | Train R² | Test MAE | Test RMSE | Test R² |
-|-------------------------------|-----------|------------|----------|----------|-----------|---------|
-| Linear Regression             | 931.33    | 1261.65    | 0.973    | 1950.47  | 2851.46   | 0.897   |
-| Ridge                         | 931.84    | 1279.91    | 0.973    | 1936.87  | 2948.39   | 0.890   |
-| Lasso                         | 929.20    | 1262.51    | 0.973    | 1936.90  | 2844.15   | 0.898   |
-| Decision Tree Regressor        | 380.67    | 908.57     | 0.986    | 1932.18  | 2807.86   | 0.900   |
-| Random Forest Regressor        | 613.27    | 938.23     | 0.985    | 1196.51  | 1749.64   | 0.961   |
-| Gradient Boosting Regressor    | 60.83     | 271.10     | 0.999    | 1693.82  | 2371.41   | 0.929   |
-
-**Observations:**  
-- **Random Forest Regressor** achieved the **best test performance** with the lowest RMSE (1749.64) and highest R² (0.961)  
-- Gradient Boosting also performs well, especially on training data  
-
----
-
-## Conclusion
-- Car age, engine size, and curbweight are key predictors  
-- Ensemble models (Random Forest, Gradient Boosting) outperform linear models  
-
----
-
-
+Linear Regression
+Train MAE: 931.33, Train RMSE: 1261.65, Train R²: 0.973
+Test MAE: 1950.47, Test RMSE: 2851.46, Test R²: 0.897
+Ridge Regression
+Train MAE: 999.04, Train RMSE: 1431.77, Train R²: 0.966
+Test MAE: 2088.35, Test RMSE: 3130.48, Test R²: 0.876
+Lasso Regression
+Train MAE: 140,006.68, Train RMSE: 228,384.54, Train R²: -873.60
+Test MAE: 106,129.57, Test RMSE: 122,605.26, Test R²: -189.41
+Decision Tree
+Train MAE: 380.67, Train RMSE: 908.57, Train R²: 0.986
+Test MAE: 1932.18, Test RMSE: 2807.86, Test R²: 0.900
+Random Forest
+Train MAE: 684.88, Train RMSE: 1035.24, Train R²: 0.982
+Test MAE: 1250.59, Test RMSE: 1824.87, Test R²: 0.958
+Gradient Boosting
+Train MAE: 60.83, Train RMSE: 271.10, Train R²: 0.999
+Test MAE: 1705.76, Test RMSE: 2367.54, Test R²: 0.929
+Observations:
+Random Forest achieved the best test performance with the lowest RMSE and highest R².
+Gradient Boosting performs very well on training data but shows slight overfitting.
+Decision Tree is accurate but less stable than ensemble models.
+Linear Regression and Ridge Regression capture trends but cannot model nonlinear relationships effectively.
+Lasso Regression fails due to aggressive coefficient shrinkage.
